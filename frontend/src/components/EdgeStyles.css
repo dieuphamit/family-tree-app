@@ -1,0 +1,44 @@
+/* Custom edge label styling for better visibility */
+.react-flow__edge-text {
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__edge-path {
+    transition: stroke-width 0.2s ease;
+}
+
+.react-flow__edge:hover .react-flow__edge-path {
+    stroke-width: 5px !important;
+}
+
+.react-flow__edge:hover .react-flow__edge-text {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Better edge label backgrounds */
+.react-flow__edge-textbg {
+    fill: white;
+    fill-opacity: 0.95;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Arrow markers */
+.react-flow__arrowhead {
+    fill: currentColor;
+}
+
+/* Clickable edges */
+.clickable-edge {
+    cursor: pointer;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+    stroke-width: 5px !important;
+}
+
+/* Parent edges - both from father and mother */
+.parent-edge .react-flow__edge-path {
+    stroke-opacity: 0.9;
+}
